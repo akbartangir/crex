@@ -6,9 +6,6 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Include directories
-include_directories(${PROJECT_SOURCE_DIR}/include)
-
 # Source files
 set(SOURCES
     src/exchange.cpp
@@ -16,6 +13,7 @@ set(SOURCES
 
 # Create library
 add_library(crex_lib ${SOURCES})
+target_include_directories(crex_lib PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 # Create executable
 add_executable(crex src/main.cpp)
