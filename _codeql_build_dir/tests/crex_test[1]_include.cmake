@@ -1,0 +1,5 @@
+if(EXISTS "/home/runner/work/crex/crex/_codeql_build_dir/tests/crex_test[1]_tests.cmake")
+  include("/home/runner/work/crex/crex/_codeql_build_dir/tests/crex_test[1]_tests.cmake")
+else()
+  add_test(crex_test_NOT_BUILT crex_test_NOT_BUILT)
+endif()
